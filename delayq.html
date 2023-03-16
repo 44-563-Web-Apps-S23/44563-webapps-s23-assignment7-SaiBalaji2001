@@ -35,6 +35,7 @@
 		</p>
         <button  onclick="get()">Get</button>
         <button  onclick="delay()">Delay</button>
+        <button onclick="promote()">Promote</button>
 	
 	
 </body>
@@ -72,6 +73,13 @@
             container_div.insertBefore(removedItem,container_div.firstChild)
         }
     }
+    function promote(){
+        let queueItems = document.getElementsByClassName("delayQ")
+        let length_elements = queueItems.length
+        let num = Math.floor(Math.random()* length_elements)
+        let randNum = queueItems[num]
+        randNum.parentNode.insertBefore(randNum,randNum.parentNode.firstChild)
+}
 
 </script>
 </html>	
